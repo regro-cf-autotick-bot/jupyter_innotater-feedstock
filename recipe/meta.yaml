@@ -1,5 +1,5 @@
 {% set name = "jupyter_innotater" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d241de08d867c65c2c083e654a616138f3c212382b7e31a7b176f084790d4edd
+  sha256: 9f1424cf06b90d79c10dd9fd1768734a33b9e4b7f8b0df3b2daee26ea983a1ef
 
 build:
   noarch: python
