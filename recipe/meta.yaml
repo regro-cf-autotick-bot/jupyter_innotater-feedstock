@@ -23,12 +23,13 @@ requirements:
     - numpy >=1.4.0
     - pypng >=0.0.19
     - jupyterlab >=3.0
-    - jupyter-packaging
+    - jupyter-packaging >= 0.11.0
     - ipywidgets >=7.6.5
 
 test:
   imports:
     - jupyter_innotater
+    - jupyter_packaging
 
 about:
   home: https://github.com/ideonate/jupyter-innotater
