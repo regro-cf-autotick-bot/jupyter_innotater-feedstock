@@ -29,7 +29,6 @@ requirements:
 test:
   imports:
     - jupyter_innotater
-    - jupyter_packaging
 
 about:
   home: https://github.com/ideonate/jupyter-innotater
