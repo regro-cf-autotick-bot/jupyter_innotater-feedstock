@@ -19,9 +19,9 @@ requirements:
     - python >=3.6
     - pip
     - jupyter-packaging
-    - jupyterlab~=3.0
+    - jupyterlab ~=3.0
     - wheel
-    - setuptools>=40.8.0
+    - setuptools >=40.8.0
   run:
     - python >=3.6
     - ipywidgets >=7.1.0
