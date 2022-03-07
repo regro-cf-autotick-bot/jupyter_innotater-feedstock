@@ -22,6 +22,7 @@ requirements:
     - jupyterlab ~=3.0
     - wheel
     - setuptools >=40.8.0
+    - nodejs
   run:
     - python >=3.6
     - ipywidgets >=7.1.0
