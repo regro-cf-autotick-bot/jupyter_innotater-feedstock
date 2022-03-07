@@ -1,28 +1,34 @@
 {% set name = "jupyter_innotater" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d241de08d867c65c2c083e654a616138f3c212382b7e31a7b176f084790d4edd
+  url: https://github.com/ideonate/jupyter-innotater/archive/refs/heads/master.zip
+  sha256: 967fc8801f1cfb976004840a68bc98c0dd87857a0699c06703f53232db0772f6
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: cd jupyter-innotater && {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - python >=3.6
     - pip
+    - jupyter-packaging
+    - jupyterlab ~=3.0
+    - wheel
+    - setuptools >=40.8.0
+    - nodejs
   run:
     - python >=3.6
     - ipywidgets >=7.1.0
-    - widgetsnbextension >=3.1.0
-    - notebook >=5.3.0
+    - jupyter-packaging
+    - traitlets
+    - jupyterlab
     - numpy >=1.4.0
     - pypng >=0.0.19
 
