@@ -11,12 +11,12 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: cd jupyter-innotater && {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - jupyter-packaging
     - jupyterlab ~=3.0
@@ -24,7 +24,7 @@ requirements:
     - setuptools >=40.8.0
     - nodejs
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - ipywidgets >=7.1.0
     - jupyter-packaging
     - traitlets
@@ -33,6 +33,8 @@ requirements:
     - pypng >=0.0.19
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - jupyter_innotater
 
